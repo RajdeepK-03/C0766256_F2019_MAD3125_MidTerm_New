@@ -101,4 +101,19 @@ public class Tax_detailsActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        return true;
+    }
+    public double calcCpp(){
+        // calculate  cpp
+        if(customer.getGrossIncome() > 57400.00){
+            cpp = (57400.00 * 0.051);
+        } else {
+            cpp = (customer.getGrossIncome() * 0.051);
+        }
+        return cpp;
+    }
     
+
+}
