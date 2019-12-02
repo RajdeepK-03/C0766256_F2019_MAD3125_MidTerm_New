@@ -114,6 +114,34 @@ public class Tax_detailsActivity extends AppCompatActivity {
         }
         return cpp;
     }
+    public double calcFedralTax(){
+        //calculate federal tax
+        double temp = taxableIncome ;
+        if(temp <= 12069.00){
+            federalTax = 0;//0%
+            temp = taxableIncome - 12069.00;
+        }
+        if(temp >= 12069.01){
+            federalTax = (temp * 0.15);//15%
+            temp = temp - 35561;
+        }
+        if(temp >= 47630.01){
+            federalTax = (temp * 0.205); //20.50%
+            temp = temp - 47628.99;
+        }
+        if(temp >= 95259.01){
+            federalTax = (temp * 0.26); //26%
+            temp = temp - 52407.99;
+        }
+        if (temp >= 147667.01){
+            federalTax = (temp * 0.29);//29%
+            temp = temp - 62703.99;
+        }
+        if(temp >= 210371.01){
+            federalTax = (temp * 0.33);//33%
+            //temp = temp - federalTax;
+        }
+        return federalTax;
+    }
     
-
 }
