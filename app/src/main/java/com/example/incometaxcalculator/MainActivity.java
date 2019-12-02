@@ -39,6 +39,7 @@ public class MainActivity  extends AppCompatActivity  {
     private EditText edtGross_Income;
     private EditText edtRRSP_Contributed;
     DatePickerDialog datePickerDialog;
+    private String Gender_selected = "";
     int dDay;
     int dMonth;
     int dYear;
@@ -89,15 +90,16 @@ public class MainActivity  extends AppCompatActivity  {
 
         rgGender.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
-            public void onCheckedChanged(RadioGroup radioGroup, int i) {
-
-                if (rbMale.isChecked())
-                    Toast.makeText(MainActivity.this, "You Chose Male", Toast.LENGTH_SHORT).show();
-                if (rbFemale.isChecked())
-                    Toast.makeText(MainActivity.this, "You Chose Female", Toast.LENGTH_SHORT).show();
-                if (rbOthers.isChecked())
-                    Toast.makeText(MainActivity.this, "You Chose Others", Toast.LENGTH_SHORT).show();
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                if(checkedId == R.id.rbMale){
+                    Gender_selected = rbMale.getText().toString();
+                }else if(checkedId == R.id.rbFemale){
+                    Gender_selected  = rbFemale.getText().toString();
+                }else {
+                    Gender_selected = rbOthers.getText().toString();
+                }
             }
+
         });
 
         //submit button
