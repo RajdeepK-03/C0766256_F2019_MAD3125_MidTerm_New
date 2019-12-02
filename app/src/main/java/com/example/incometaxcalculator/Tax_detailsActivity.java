@@ -16,10 +16,16 @@ public class Tax_detailsActivity extends AppCompatActivity {
     TextView txtsin;
     TextView txtfull_Name;
     TextView txtgenDer;
-    TextView txtgross_income,
-            txttaxDate, txtfederal_Tax, txtprovincial_Tax, lblcpp,
-            lblEmp_Insurance, lblRRSPcontributed, lblCfRRSP,
-            lblTaxableIncome, lblTaxPaid;
+    TextView txtgross_income;
+    TextView txtfederal_Tax;
+    TextView lblcpp;
+    TextView txtprovincial_Tax;
+    TextView txttaxDate;
+    TextView lblEmp_Insurance;
+    TextView lblRRSPcontributed;
+    TextView lblCfRRSP;
+    TextView lblTaxableIncome;
+    TextView lblTaxPaid;
     double cpp = 0, ei = 0;  double rrsp = 0, rrspCf = 0, taxableIncome, federalTax,
             provincialTax, totalTaxPaid;
     @Override
@@ -61,14 +67,16 @@ public class Tax_detailsActivity extends AppCompatActivity {
         lblcpp.setText("CPP COntribution in Year:\t" + cpp);
 
         // calculate employement insurance
-        
+
         if(grossIncome > 53100){
             ei = (53100 * 0.0162); //1.62%
         }else{
             ei = (grossIncome * (1.62/100));
         }
         lblEmp_Insurance.setText("Employeement Insurance: \t" + ei);
+
         // calculate RRSP
+
         rrsp = customer.getRrspContri();
         double maxRRSP = (grossIncome * 0.18); //18%
         if(rrsp > maxRRSP ){
