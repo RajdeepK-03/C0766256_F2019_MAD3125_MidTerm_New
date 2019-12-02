@@ -30,17 +30,38 @@
            <TextView android:id="@+id/txt_age"
                android:layout_width="match_parent"
                android:layout_height="wrap_content"
-               android:layout_marginStart="16dp"
-               android:layout_marginTop="32dp"
-               android:layout_marginEnd="16dp"
+               android:layout_marginStart="15dp"
+               android:layout_marginTop="30dp"
+               android:layout_marginEnd="15dp"
                android:hint="Age" />
            <TextView android:id="@+id/txtGender"
                android:layout_width="match_parent"
                android:layout_height="wrap_content"
-               android:layout_marginStart="16dp"
-               android:layout_marginTop="32dp"
-               android:layout_marginEnd="16dp"
+               android:layout_marginStart="15dp"
+               android:layout_marginTop="30dp"
+               android:layout_marginEnd="15dp"
                android:hint="Gender" />
+           <TextView android:id="@+id/txtgrossIncome"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginStart="15dp"
+               android:layout_marginTop="30dp"
+               android:layout_marginEnd="15dp"
+               android:hint="Gross Income" />
+           <TextView android:id="@+id/txttaxFilingDate"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginStart="16dp"
+               android:layout_marginTop="30dp"
+               android:layout_marginEnd="15dp"
+               android:hint="TAX Filing Date" />
+           <TextView android:id="@+id/txtCpp"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginStart="16dp"
+               android:layout_marginTop="30dp"
+               android:layout_marginEnd="15dp"
+               android:hint="CPP contribution in Year" />
 
        </LinearLayout>
     </ScrollView>
