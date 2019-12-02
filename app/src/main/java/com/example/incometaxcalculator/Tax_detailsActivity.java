@@ -51,6 +51,7 @@ public class Tax_detailsActivity extends AppCompatActivity {
         lblRRSPcontributed.setText("RRSP Contributed: \t" + customer.getRrspContri());
 
         // calculate  cpp
+
         double grossIncome = customer.getGrossIncome();
         if(grossIncome > 57400.00){
             cpp = (57400.00 * 0.051); //5.10%
@@ -58,7 +59,9 @@ public class Tax_detailsActivity extends AppCompatActivity {
             cpp = (grossIncome * 0.051);
         }
         lblcpp.setText("CPP COntribution in Year:\t" + cpp);
+
         // calculate employement insurance
+        
         if(grossIncome > 53100){
             ei = (53100 * 0.0162); //1.62%
         }else{
