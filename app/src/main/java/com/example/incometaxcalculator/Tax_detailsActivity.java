@@ -75,10 +75,12 @@ public class Tax_detailsActivity extends AppCompatActivity {
             rrsp = rrsp;
         }
         lblCfRRSP.setText("RRSP Carry forward: \t"+ rrspCf);
+
         //taxable income
         taxableIncome = grossIncome - (cpp + ei + rrsp);
 
         lblTaxableIncome.setText("Taxable income:\t" + (double) taxableIncome);
+
         //federal tax
         double calFederal = calcFedralTax();
         txtfederal_Tax.setText("Federal Tax: \t" + calFederal);
@@ -174,7 +176,7 @@ public class Tax_detailsActivity extends AppCompatActivity {
         return provincialTax;
     }
     public  double calTaxPaid(){
-        return totalTaxPaid;
+        return totalTaxPaid = federalTax + provincialTax;
     }
 
 }
