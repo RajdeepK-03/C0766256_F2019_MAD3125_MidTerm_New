@@ -21,6 +21,7 @@
             android:text="Income Tax Calculator"
             android:textAlignment="center"
             android:textAllCaps="false"
+            android:layout_marginTop="20dp"
             android:textColor="@color/design_default_color_background"
             android:textSize="24sp"
             android:textStyle="bold"
@@ -53,8 +54,6 @@
             android:layout_marginBottom="8dp"
             android:hint="Enter last name" />
 
-
-
         <TextView
             android:id="@+id/txtDate"
             android:layout_width="match_parent"
@@ -72,15 +71,19 @@
             android:layout_weight="1"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
+
             android:outlineProvider="bounds"/>
 
 
-        <TextView android:id="@+id/txtGender"
+        <TextView
+            android:id="@+id/txtGender"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:textStyle="bold"
-            android:text="Gender" />
+            android:layout_marginBottom="8dp"
+            android:background="@android:color/darker_gray"
+            android:text="Gender"
+            android:textSize="18sp" />
 
         <RadioGroup
             android:id="@+id/rgGender"
@@ -129,6 +132,7 @@
             android:id="@+id/btnCalculate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
             android:text="Calculate" />
 
 
