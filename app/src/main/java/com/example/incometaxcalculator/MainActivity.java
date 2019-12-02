@@ -23,7 +23,7 @@ import java.util.Calendar;
 import java.util.Locale;
 
 public class MainActivity  extends AppCompatActivity  {
-
+    CRACustomer customer;
     final Calendar calendar = Calendar.getInstance();
     private TextView txtDate;
     private RadioGroup rgGender;
@@ -43,6 +43,7 @@ public class MainActivity  extends AppCompatActivity  {
     int dDay;
     int dMonth;
     int dYear;
+
     @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -107,17 +108,18 @@ public class MainActivity  extends AppCompatActivity  {
         btnCal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String age=dateFormat();
-                if(Integer.parseInt(age)<18){
-                    btnCal.setAlpha(.5f);
-                    btnCal.setClickable(false);
-                }
-                else{
-                    Intent intent=new Intent(MainActivity.this,Tax_detailsActivity.class);
-                    startActivity(intent);
-                }}
+                Double grossIncome = Double.parseDouble(edtGross_Income.getText().toString());
+                Double rrsp = Double.parseDouble(edtRRSP_Contributed.getText().toString());
+                customer = new CRACustomer(edtSinNumber.getText().toString(),
+                        edtFirstname.getText().toString(),
+                        edtLastname.getText().toString(),
+                        Gender_selected, grossIncome, rrsp);
+                Intent mIntent = new Intent(MainActivity.this, Tax_detailsActivity.class);
+                mIntent.putExtra("CRACustomer", customer);
+                startActivity(mIntent);
+            }
         });
-    }
+    };
     private String dateFormat() {
         String myFormat = "dd-MMM-yyyy";
         SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.US);
