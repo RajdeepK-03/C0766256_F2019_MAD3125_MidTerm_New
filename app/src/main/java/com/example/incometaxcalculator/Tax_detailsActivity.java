@@ -80,6 +80,7 @@ public class Tax_detailsActivity extends AppCompatActivity {
         rrsp = customer.getRrspContri();
         double maxRRSP = (grossIncome * 0.18); //18%
         if(rrsp > maxRRSP ){
+            Toast.makeText(this,"you mave have to face a penalty,amount exceeding",Toast.LENGTH_SHORT).show();
             rrspCf = rrsp - maxRRSP;
             rrsp = maxRRSP;
         }else{
