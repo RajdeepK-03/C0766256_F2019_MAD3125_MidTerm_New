@@ -25,7 +25,7 @@ import java.util.Locale;
 public class MainActivity  extends AppCompatActivity  {
 
     final Calendar calendar = Calendar.getInstance();
-    TextView txtDate;
+    private TextView txtDate;
     private RadioGroup rgGender;
     private RadioButton rbMale;
     private RadioButton rbFemale;
@@ -84,6 +84,7 @@ public class MainActivity  extends AppCompatActivity  {
         edtGross_Income = findViewById(R.id.edtGrossIncome);
         btnCal=findViewById(R.id.btnCalculate);
         edtRRSP_Contributed = findViewById(R.id.edtRRSP);
+        txtDate = findViewById(R.id.txtDate);
 
 
         rgGender.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
