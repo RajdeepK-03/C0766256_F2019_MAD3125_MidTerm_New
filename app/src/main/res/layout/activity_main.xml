@@ -72,6 +72,12 @@
 
             android:textSize="18sp" />
 
+        <TextView android:id="@+id/txtGender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Gender" />
+
         <RadioGroup
             android:id="@+id/rgGender"
             android:layout_width="match_parent"
@@ -104,8 +110,7 @@
             android:layout_marginTop="8dp"
             android:inputType="numberDecimal"
             android:hint="Enter Gross income" />
-
-
+        
         <EditText
             android:id="@+id/edtRRSP"
             android:layout_width="match_parent"
