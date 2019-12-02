@@ -124,7 +124,7 @@ public class MainActivity  extends AppCompatActivity  {
         String myFormat = "dd-MMM-yyyy";
         SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.US);
 
-        txtDate.setText(sdf.format(calendar.getTime()));
+        txtDate.setText(" D.O.B\t:" + sdf.format(calendar.getTime()));
 
         LocalDate l = LocalDate.of(calendar.get(Calendar.YEAR),calendar.get(Calendar.MONTH), calendar.get(Calendar.DAY_OF_MONTH));
         LocalDate now = LocalDate.now(); //gets localDate
