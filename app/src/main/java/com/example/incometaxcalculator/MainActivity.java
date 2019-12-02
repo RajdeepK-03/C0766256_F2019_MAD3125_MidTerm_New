@@ -24,15 +24,17 @@ public class MainActivity  extends AppCompatActivity  {
 
     final Calendar calendar = Calendar.getInstance();
     TextView txtDate;
-    RadioGroup rgGender;
-    RadioButton rbMale;
-    RadioButton rbFemale;
-    RadioButton rbOthers;
-    TextView txtFullName;
-    EditText edtFirstname;
-    EditText edtLastname;
-    Button btnSubmit;
-    TextView txtAge;
+    private RadioGroup rgGender;
+    private RadioButton rbMale;
+    private RadioButton rbFemale;
+    private RadioButton rbOthers;
+    private TextView txtFullName;
+    private EditText edtFirstname;
+    private EditText edtLastname;
+    private Button btnCal;
+    private TextView txtAge;
+    private EditText edtGross_Income;
+    private EditText edtRRSP_Contributed;
     DatePickerDialog datePickerDialog;
 
     int dDay;
@@ -44,7 +46,6 @@ public class MainActivity  extends AppCompatActivity  {
         setContentView(R.layout.activity_main);
         txtDate= findViewById(R.id.txtDate);
 
-        // https://stackoverflow.com/questions/14933330/datepicker-how-to-popup-datepicker-when-click-on-edittext
         final DatePickerDialog.OnDateSetListener date = new DatePickerDialog.OnDateSetListener() {
             @Override
             public void onDateSet(DatePicker view, int year, int monthOfYear,
@@ -84,14 +85,14 @@ public class MainActivity  extends AppCompatActivity  {
         });
 
         //submit button
-        btnSubmit=findViewById(R.id.btnCalculate);
-        btnSubmit.setOnClickListener(new View.OnClickListener() {
+        btnCal=findViewById(R.id.btnCalculate);
+        btnCal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String age=dateFormat();
                 if(Integer.parseInt(age)<18){
-                    btnSubmit.setAlpha(.5f);
-                    btnSubmit.setClickable(false);
+                    btnCal.setAlpha(.5f);
+                    btnCal.setClickable(false);
                 }
                 else{
                     Intent intent=new Intent(MainActivity.this,Tax_detailsActivity.class);
