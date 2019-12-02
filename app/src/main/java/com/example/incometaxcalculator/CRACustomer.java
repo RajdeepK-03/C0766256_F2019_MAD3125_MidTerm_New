@@ -9,11 +9,15 @@ import java.util.Date;
 
 public class CRACustomer implements Parcelable
 {
-    String sinNumber, firstName, lastName, fullName, gender;
+    String sinNumber;
+    String firstName;
+    String lastName;
+    String fullName;
+    String gender;
     Date birthDate,filingDate;
     int age;
     double grossIncome, federalTax, provicialTax, empInsurance;
-    double rrspContri, rrspCarryForward, taxableIncome, taxPaid;
+    double rrspContributed, rrspCarryForward, taxableIncome, taxPaid;
 
     public CRACustomer(String sinNumber, String firstName,
                        String lastName, String gender, double grossIncome, double rrspContri)
@@ -24,7 +28,7 @@ public class CRACustomer implements Parcelable
         this.fullName = fullName;
         this.gender = gender;
         this.grossIncome = grossIncome;
-        this.rrspContri = rrspContri;
+        this.rrspContributed = rrspContri;
     }
 
 
@@ -70,7 +74,7 @@ public class CRACustomer implements Parcelable
     }
 
     public double getRrspContri() {
-        return rrspContri;
+        return rrspContributed;
     }
 
     public double getRrspCarryForward() {
@@ -106,7 +110,7 @@ public class CRACustomer implements Parcelable
         dest.writeString(fullName);
         dest.writeString(gender);
         dest.writeDouble(grossIncome);
-        dest.writeDouble(rrspContri);
+        dest.writeDouble(rrspContributed);
 //        dest.writeDouble(taxableIncome);
 //        dest.writeDouble(federalTax);
 
@@ -118,7 +122,7 @@ public class CRACustomer implements Parcelable
         fullName = parcel.readString();
         gender = parcel.readString();
         grossIncome = parcel.readDouble();
-        rrspContri = parcel.readDouble();
+        rrspContributed = parcel.readDouble();
 
     }
     public  static final Parcelable.Creator<CRACustomer> CREATOR = new Creator<CRACustomer>() {
