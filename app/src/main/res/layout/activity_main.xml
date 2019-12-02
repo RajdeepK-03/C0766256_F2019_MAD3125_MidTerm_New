@@ -110,7 +110,7 @@
             android:layout_marginTop="8dp"
             android:inputType="numberDecimal"
             android:hint="Enter Gross income" />
-        
+
         <EditText
             android:id="@+id/edtRRSP"
             android:layout_width="match_parent"
