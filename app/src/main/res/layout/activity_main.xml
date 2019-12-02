@@ -112,14 +112,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:inputType="numberDecimal"
-            android:hint="Enter Gross income" />
+            android:drawableLeft="@drawable/ic_action_name"
+            android:hint="Enter Gross income"
+            android:inputType="numberDecimal" />
 
         <EditText
             android:id="@+id/edtRRSP"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
+            android:drawableLeft="@drawable/ic_action_name"
             android:hint="RRSP Contributed" />
 
 
