@@ -1,9 +1,11 @@
 package com.example.incometaxcalculator;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.DatePickerDialog;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -31,15 +33,16 @@ public class MainActivity  extends AppCompatActivity  {
     private TextView txtFullName;
     private EditText edtFirstname;
     private EditText edtLastname;
+    private EditText edtSinNumber;
     private Button btnCal;
     private TextView txtAge;
     private EditText edtGross_Income;
     private EditText edtRRSP_Contributed;
     DatePickerDialog datePickerDialog;
-
     int dDay;
     int dMonth;
     int dYear;
+    @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -71,6 +74,18 @@ public class MainActivity  extends AppCompatActivity  {
         rbMale=findViewById(R.id.rbMale);
         rbFemale=findViewById(R.id.rbFemale);
         rbOthers=findViewById(R.id.rbOthers);
+        edtSinNumber = findViewById(R.id.edtSinNum);
+        edtFirstname = findViewById(R.id.edtFname);
+        edtLastname = findViewById(R.id.edtLname);
+        rgGender = findViewById(R.id.rgGender);
+        rbMale = findViewById(R.id.rbMale);
+        rbFemale = findViewById(R.id.rbFemale);
+        rbOthers = findViewById(R.id.rbOthers);
+        edtGross_Income = findViewById(R.id.edtGrossIncome);
+        btnCal=findViewById(R.id.btnCalculate);
+        edtRRSP_Contributed = findViewById(R.id.edtRRSP);
+
+
         rgGender.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
@@ -85,7 +100,7 @@ public class MainActivity  extends AppCompatActivity  {
         });
 
         //submit button
-        btnCal=findViewById(R.id.btnCalculate);
+
         btnCal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
