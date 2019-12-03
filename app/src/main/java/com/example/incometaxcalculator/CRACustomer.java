@@ -18,7 +18,7 @@ public class CRACustomer implements Parcelable
     Date filingDate;
 
     int age;
-    double grossIncome, federalTax, provicialTax, empInsurance;
+    double grossIncome, federalTax , provicialTax, empInsurance;
     double rrspContributed, rrspCarryForward, taxableIncome, taxPaid;
 
     public CRACustomer(String  sinNumber, String firstName,
