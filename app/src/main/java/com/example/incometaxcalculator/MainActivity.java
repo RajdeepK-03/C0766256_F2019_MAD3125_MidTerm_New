@@ -109,9 +109,9 @@ public class MainActivity  extends AppCompatActivity  {
         btnCal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                SimpleDateFormat sm=new SimpleDateFormat("dd-MMM-yyyy", Locale.US);
-                Calendar myCalendar = Calendar.getInstance();
-                String currdate=sm.format(myCalendar.getTime());
+                //SimpleDateFormat sm=new SimpleDateFormat("dd-MMM-yyyy", Locale.US);
+               // Calendar myCalendar = Calendar.getInstance();
+                //String currdate=sm.format(myCalendar.getTime());
                 Double grossIncome = Double.parseDouble(edtGross_Income.getText().toString());
                 Double rrsp = Double.parseDouble(edtRRSP_Contributed.getText().toString());
                 customer = new CRACustomer(edtSinNumber.getText().toString(),
