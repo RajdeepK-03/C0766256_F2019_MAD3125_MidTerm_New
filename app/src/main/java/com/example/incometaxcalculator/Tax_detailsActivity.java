@@ -53,6 +53,7 @@ public class Tax_detailsActivity extends AppCompatActivity {
         CRACustomer customer = mIntent.getParcelableExtra("CRACustomer");
 
         txtsin.setText(" SIN: \t" + customer.getSinNumber());
+        
         txtfull_Name.setText(" FULL NAME: \t" + customer.getFullName());
         txtgenDer.setText(" GENDER: \t" + customer.getGender());
         txtgross_income.setText(" GROSS INCOME: \t" + customer.getGrossIncome());
