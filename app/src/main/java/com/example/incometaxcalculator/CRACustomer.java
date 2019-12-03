@@ -14,7 +14,7 @@ public class CRACustomer implements Parcelable
     String lastName;
     String fullName;
     String gender;
-    Date birthDate;
+    Date  birthDate;
     Date filingDate;
 
     int age;
