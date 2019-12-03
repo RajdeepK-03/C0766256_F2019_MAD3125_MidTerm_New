@@ -21,7 +21,7 @@ public class CRACustomer implements Parcelable
     double grossIncome, federalTax, provicialTax, empInsurance;
     double rrspContributed, rrspCarryForward, taxableIncome, taxPaid;
 
-    public CRACustomer(String sinNumber, String firstName,
+    public CRACustomer(String  sinNumber, String firstName,
                        String lastName, String gender, double grossIncome, double rrspContri)
     {
         this.sinNumber = sinNumber;
