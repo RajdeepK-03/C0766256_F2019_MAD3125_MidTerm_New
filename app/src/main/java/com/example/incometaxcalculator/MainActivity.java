@@ -39,7 +39,7 @@ public class MainActivity  extends AppCompatActivity  {
     private EditText edtGross_Income;
     private EditText edtRRSP_Contributed;
     DatePickerDialog datePickerDialog;
-    
+
     private String Gender_selected = "";
     int dDay;
     int dMonth;

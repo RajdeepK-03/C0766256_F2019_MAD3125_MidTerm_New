@@ -26,6 +26,7 @@ public class Tax_detailsActivity extends AppCompatActivity {
     TextView lblCfRRSP;
     TextView lblTaxableIncome;
     TextView lblTaxPaid;
+    
     double cpp = 0, ei = 0;  double rrsp = 0, rrspCf = 0, taxableIncome, federalTax,
             provincialTax, totalTaxPaid;
     @Override
