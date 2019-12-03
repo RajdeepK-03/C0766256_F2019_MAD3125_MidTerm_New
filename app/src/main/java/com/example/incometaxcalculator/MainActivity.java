@@ -112,7 +112,7 @@ public class MainActivity  extends AppCompatActivity  {
                 //SimpleDateFormat sm=new SimpleDateFormat("dd-MMM-yyyy", Locale.US);
                // Calendar myCalendar = Calendar.getInstance();
                 //String currdate=sm.format(myCalendar.getTime());
-                
+
                 Double grossIncome = Double.parseDouble(edtGross_Income.getText().toString());
                 Double rrsp = Double.parseDouble(edtRRSP_Contributed.getText().toString());
                 customer = new CRACustomer(edtSinNumber.getText().toString(),
