@@ -14,7 +14,9 @@ public class CRACustomer implements Parcelable
     String lastName;
     String fullName;
     String gender;
-    Date birthDate,filingDate;
+    Date birthDate;
+    Date filingDate;
+
     int age;
     double grossIncome, federalTax, provicialTax, empInsurance;
     double rrspContributed, rrspCarryForward, taxableIncome, taxPaid;
