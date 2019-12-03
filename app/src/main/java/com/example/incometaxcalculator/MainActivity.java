@@ -28,7 +28,7 @@ public class MainActivity  extends AppCompatActivity  {
     private TextView txtDate;
     private RadioGroup rgGender;
     private RadioButton rbMale;
-    private RadioButton rbFemale;
+    private RadioButton rbFemale; 
     private RadioButton rbOthers;
     private TextView txtFullName;
     private EditText edtFirstname;
