@@ -145,6 +145,7 @@ public class Tax_detailsActivity extends AppCompatActivity {
         }
         if(temp >= 47630.01){
             federalTax = (temp * 0.205); //20.50%
+            
             temp = temp - 47628.99;
         }
         if(temp >= 95259.01){
